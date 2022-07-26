@@ -18,7 +18,6 @@
 </template>
 
 <script>
-  import Background from '../components/Background.vue';
   import SearchBar from '../components/SearchBar.vue'
 
 
@@ -26,7 +25,6 @@
 
     name: 'Search',
     components: {
-      Background,
       SearchBar
     },
     methods: {
