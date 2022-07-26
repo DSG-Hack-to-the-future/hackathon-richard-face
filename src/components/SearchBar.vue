@@ -1,18 +1,16 @@
 <template>
     <v-container
         id="search-input"
-        fluid
-        
+        class="pa-xs-4 ma-xs-4"
     >
         <v-row>
-            <v-col cols="auto">
-                <Listener />
-                <input 
-                    class="rounded-pill" 
-                    type="text"
-                />
-                <v-btn>Search</v-btn>
-            </v-col>
+            <Listener />
+            <v-text-field 
+                class="rounded-pill" 
+                type="text"
+                solo
+            />
+            <v-btn>Search</v-btn>
         </v-row>
         
     </v-container>

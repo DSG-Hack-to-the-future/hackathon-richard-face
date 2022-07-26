@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "clean": "rm -rf ~/hackathon/richard-face/node_modules && rm package-lock.json && npm install",
+    "build": "npm run clean && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview"

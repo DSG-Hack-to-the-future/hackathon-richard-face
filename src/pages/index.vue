@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-app-bar
       app
       color="primary"
@@ -10,7 +10,7 @@
       </div>
     </v-app-bar>
 
-    <v-main>
+    <v-main color="secondary">
       <SearchBar/>
     </v-main>
   </v-app>
