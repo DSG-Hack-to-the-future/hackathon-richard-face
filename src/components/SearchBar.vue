@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      input: "",
       errorMessage: "",
       match: [
         v => (v && (new RegExp('^[a-zA-Z0-9\-\ ]+$').test(v))) || "Invalid Search"
@@ -16,7 +17,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      this.$emit('searchSubmit');
+      this.$emit('searchSubmit', this.input);
     }
   }
 }
@@ -31,12 +32,14 @@ export default {
         solo 
         clearable
         :error-messages="errorMessage"
-        v-on:emptied="() => {errorMessage = ''}"
+        v-on:emptied="errorMessage = ''"
         :rules="match"
         required
+        append-icon="mdi-arrow-right"
+        v-model="input"
+        @click:append="handleSubmit"
       >
         <Listener slot="prepend"/>
-        <v-btn @click="handleSubmit" slot="append">Search</v-btn>
       </v-text-field>
       
       

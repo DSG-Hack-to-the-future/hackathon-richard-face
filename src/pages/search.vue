@@ -34,8 +34,11 @@
         this.$vuetify.theme.dark = !this.$vuetify.theme.dark
         console.log(this.$vuetify.theme.themes.dark)
       },
-      searchSubmit() {
-        this.$router.push("/results")
+      searchSubmit(input) {
+        this.$router.push({
+          path: "/results",
+          query: { search: input }
+        })
       }
     }
 
