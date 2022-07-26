@@ -1,5 +1,6 @@
 <template>
-  <v-app dark>
+  <v-app>
+    <Background />
     <v-app-bar
       app
       color="primary"
@@ -18,13 +19,15 @@
 
 <script>
 import SearchBar from '../components/SearchBar.vue'
+import Background from '../components/Background.vue';
 
 export default {
   name: 'Richard',
 
   components: {
     SearchBar,
-  },
+    Background
+},
 
   data: () => ({
     //
