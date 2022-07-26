@@ -1,36 +1,38 @@
 <template>
   <v-app>
-    <Background />
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        Richard
-      </div>
-    </v-app-bar>
-
-    <v-main color="secondary">
-      <SearchBar/>
-    </v-main>
+    <Transition>
+      <v-main>
+        <NuxtLink color="primary" to="/search">Welcome</NuxtLink>
+      </v-main>
+    </Transition>
+    
   </v-app>
 </template>
 
 <script>
-import SearchBar from '../components/SearchBar.vue'
-import Background from '../components/Background.vue';
+
 
 export default {
   name: 'Richard',
-
   components: {
-    SearchBar,
-    Background
-},
+  },
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      
+    }
+  },
+  
+   
 };
 </script>
+
+<style>
+  .v-enter-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .v-enter-from {
+    opacity: 0;
+  }
+</style>

@@ -8,7 +8,6 @@ export default {
   },
   data() {
     return {
-      
       errorMessage: "",
       match: [
         v => (v && (new RegExp('^[a-zA-Z0-9\-\ ]+$').test(v))) || "Invalid Search"
@@ -16,16 +15,7 @@ export default {
     }
   },
   methods: {
-    generateSuggestions: function (event) {
-      let temp = []
-      for (let i = 0; i < 5; i++) {
-        temp.push(event + i);
-      }
-
-      this.searchMessages = temp;
-      console.log(this.searchMessages);
-    },
-    submit: function () {
+    submit() {
 
     },
   }
@@ -33,17 +23,15 @@ export default {
 </script>
 
 <template>
-  <v-container id="search-input">
+  <v-container id="search-input" class="fill-height">
     <v-row class="pa-auto ma-5">   
       <v-text-field 
         class="rounded-pill" 
         type="text" 
         solo 
-        clearable 
-        :messages="searchMessages"
-        :error-messages="errorMessages"
-        v-on:input="generateSuggestions($event)"
-        v-on:emptied="() => {searchMessages = []; errorMessage = ''}"
+        clearable
+        :error-messages="errorMessage"
+        v-on:emptied="() => {errorMessage = ''}"
         :rules="match"
         required
       >

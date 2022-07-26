@@ -1,12 +1,18 @@
 <template>
     <v-btn>
-        <v-icon>mdi-microphone</v-icon>
+        <Microphone :requestAccess="true" :mediaType="'audio/webm'">
+            <v-icon slot="record" name="record">mdi-microphone</v-icon>
+        </Microphone>
     </v-btn>
 </template>
 
 <script>
+import { Microphone } from 'vue-capture'
 
 export default {
-    name: "Listener"
+    name: "Listener",
+    components: {
+        Microphone
+    },
 }
 </script>
