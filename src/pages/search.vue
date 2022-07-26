@@ -1,29 +1,20 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-    >
-      <NuxtLink to="/" class="d-flex align-center">
-        Richard
-      </NuxtLink>
-
-      <v-btn @click="toggleTheme" text rounded>Toggle Theme</v-btn>
-    </v-app-bar>
-
+  <v-container>
     <Background />
     <v-main>
       
       <v-container fluid>
         <v-row>
           <v-col>
-            <SearchBar />
+            <SearchBar @searchSubmit="searchSubmit" />
           </v-col>
         </v-row>
       </v-container>
       
     </v-main>
     
-  </v-app>
+   
+  </v-container>
 </template>
 
 <script>
@@ -42,6 +33,9 @@
       toggleTheme() {
         this.$vuetify.theme.dark = !this.$vuetify.theme.dark
         console.log(this.$vuetify.theme.themes.dark)
+      },
+      searchSubmit() {
+        this.$router.push("/results")
       }
     }
 

@@ -7,7 +7,7 @@ Vue.use(Vuetify)
 const opts = { 
     theme: {
         themes: {
-            dark: { 
+            custom: { 
                 primary: "#085A4A",
                 secondary: "#f26422",
                 accent: '#e98f3a',
@@ -18,7 +18,7 @@ const opts = {
                 warning: '#FFC107',
             }
         },
-        dark: true
+        custom: true
     } 
 }
 

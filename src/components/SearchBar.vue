@@ -15,9 +15,9 @@ export default {
     }
   },
   methods: {
-    submit() {
-
-    },
+    handleSubmit() {
+      this.$emit('searchSubmit');
+    }
   }
 }
 </script>
@@ -36,7 +36,7 @@ export default {
         required
       >
         <Listener slot="prepend"/>
-        <v-btn v-on:click="submit" slot="append">Search</v-btn>
+        <v-btn @click="handleSubmit" slot="append">Search</v-btn>
       </v-text-field>
       
       
