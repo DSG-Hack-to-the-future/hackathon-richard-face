@@ -1,12 +1,7 @@
 <template>
-  <v-app>
-    <Transition>
-      <v-main>
-        <NuxtLink color="primary" to="/search">Welcome</NuxtLink>
-      </v-main>
-    </Transition>
-    
-  </v-app>
+  <v-container>
+    <NuxtLink :color="this.$vuetify.theme.themes.dark.secondary" to="/search">Welcome</NuxtLink>
+  </v-container>
 </template>
 
 <script>
