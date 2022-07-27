@@ -1,12 +1,17 @@
 <template>
-    <v-container>
-        <h1>{{searchTerm}}</h1>
-        <ProductResults></ProductResults>
-        <StoreMap></StoreMap>
-        <ProTips></ProTips>
-        <CommunityCalendar></CommunityCalendar>
-        <Recommendations></Recommendations>
-    </v-container>
+    <v-main>
+        <h1> Results: "{{searchTerm}}"</h1>
+        <h3>Store: 160</h3>
+        <hr />
+        <v-container >
+            <ProductResults></ProductResults>
+            <StoreMap></StoreMap>
+            <ProTips></ProTips>
+            <CommunityCalendar></CommunityCalendar>
+            <Recommendations></Recommendations>
+        </v-container>
+        
+    </v-main>
 </template>
 
 <script>

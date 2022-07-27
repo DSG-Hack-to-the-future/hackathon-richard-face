@@ -1,7 +1,7 @@
 export class SpeechToText {
     constructor(axios) {
       this.$axios = axios;
-      this.baseUrl = "http://localhost:8000/app/v1/speech/convert-to-text/";
+      this.baseUrl = "/api/v1/speech/convert-to-text/";
     }
 
 
@@ -10,7 +10,7 @@ export class SpeechToText {
 
         // Encode the String
         var encodedString = Base64.encode(audioData);
-        console.log(encodedString); // Outputs: "SGVsbG8gV29ybGQh"
+        console.log(encodedString);
  
         this.$axios.$post(this.baseUrl, {audio: encodedString})
     }

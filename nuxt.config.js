@@ -13,6 +13,13 @@ export default {
   modules: [
       // Simple usage
       '@nuxtjs/vuetify',
-      '@nuxtjs/axios'
-  ]
+      '@nuxtjs/axios',
+  ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    "/api/": "http://localhost:8000",
+    "/v3/findByEcode": "https://prod-catalog-productdetails-api.iso.ap01.pcf.dcsg.com"
+  }
 }

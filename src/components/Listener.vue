@@ -1,7 +1,6 @@
 <template>
     <v-btn @click="handleRecord">
-        <v-icon v-if="!recording">mdi-microphone</v-icon>
-        <v-icon v-if="recording">mdi-microphone-outline</v-icon>
+        <v-icon >mdi-microphone</v-icon>
     </v-btn>
 </template>
 
@@ -14,7 +13,6 @@ export default {
     },
     data() {
         return {
-            recording: false
         }
     },
     methods: {

@@ -2,6 +2,13 @@
     <v-container>
         <h1>Recommendations</h1>
         <p>{{data}}</p>
+        <v-overlay :value="overlay">
+            <v-progress-circular
+                indeterminate
+                size="64"
+            ></v-progress-circular>
+        </v-overlay>
+
     </v-container>
 </template>
 
@@ -9,11 +16,17 @@
 export default {
     data() {
         return {
-            data: ""
+            data: "",
+            overlay: true
         }
     },
     mounted() {
-        this.data = this.$recommendationsIntegration.get("16NIKMRFRC1GRYWHTLFS");
+        this.$recommendationsIntegration
+            .get("16NIKMRFRC1GRYWHTLFS")
+            .then((data) => {
+                this.data = data
+                this.overlay = false
+            });
     }
 }
 </script>
