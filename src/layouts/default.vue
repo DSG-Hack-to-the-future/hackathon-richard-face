@@ -4,8 +4,8 @@
         </Nuxt>
         <v-footer app>
             <NuxtLink to="/" class="align-center">
-                <v-img src="https://i.pinimg.com/originals/b0/2b/5e/b02b5ef69f0e9d9198749632d5940647.png" width="100px"
-                    height="100px" />
+                <v-img src="/Richie_gimp.png" width="100px"
+                    height="100px" style="border-radius: 60%;"/>
             </NuxtLink>
             <v-btn @click="toggleTheme" text rounded>Toggle Theme</v-btn>
             <!-- <div justify="end"><Avatar /></div> -->

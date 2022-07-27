@@ -5,7 +5,7 @@
         <StoreMap></StoreMap>
         <ProTips></ProTips>
         <CommunityCalendar></CommunityCalendar>
-        <NuxtLink to="/recommendations">Would you like personalized recommendations?</NuxtLink>
+        <Recommendations></Recommendations>
     </v-container>
 </template>
 
@@ -14,6 +14,8 @@ import CommunityCalendar from '../components/CommunityCalendar.vue'
 import ProductResults from '../components/ProductResults.vue'
 import ProTips from '../components/ProTips.vue'
 import StoreMap from '../components/StoreMap.vue'
+import Recommendations from '../components/Recommendations.vue'
+
 
 export default {
     name: "Results",
@@ -21,7 +23,8 @@ export default {
         CommunityCalendar,
         ProTips,
         ProductResults,
-        StoreMap
+        StoreMap,
+        Recommendations,
     },
     data() {
         return {

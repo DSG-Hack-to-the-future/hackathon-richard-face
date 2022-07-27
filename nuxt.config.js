@@ -7,7 +7,8 @@ export default {
     transpile: ['mdi-vue'],
   },
   plugins: [
-    '@/plugins/vuetify.js'
+    '@/plugins/vuetify.js',
+    '~/plugins/integrations.js',
   ],
   modules: [
       // Simple usage

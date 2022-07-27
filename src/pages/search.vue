@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <Background />
     <v-main>
       
       <v-container fluid>
