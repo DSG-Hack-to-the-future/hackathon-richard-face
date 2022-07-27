@@ -25,7 +25,22 @@ export class Recommendations {
         let responses = []
         for (let i = 0; i < 5; i++) {
             let productId = idList.results[i].id 
-            responses.push(await this.$axios.$get(`${this.productDetailsURL}?id=${productId}&inventory=true&active=true&clearance=false&attributes=true&skus=true&category=false`))
+            
+            let responseData = await this.$axios.$get(`${this.productDetailsURL}?id=${productId}&inventory=true&active=true&clearance=false&attributes=true&skus=true&category=false`)
+
+            console.log(responseData)
+
+            // responseData[0].skus.forEach(element => {
+            //     console.log(element);
+            //     responses.push({
+            //         name: element.name
+            //     })
+            // });
+
+            responses.push({
+                name: responseData[0].skus[0].name
+            })
+            
         }
 
         console.log(responses);

@@ -1,7 +1,13 @@
 <template>
     <v-container>
         <h1>Recommendations</h1>
-        <p>{{data}}</p>
+        <v-row 
+            class="ma-5"
+            v-for="item in data"
+            v-bind:key="item.id"
+        >
+            {{item}}
+        </v-row>
         <v-overlay :value="overlay">
             <v-progress-circular
                 indeterminate
@@ -16,7 +22,7 @@
 export default {
     data() {
         return {
-            data: "",
+            data: [],
             overlay: true
         }
     },
