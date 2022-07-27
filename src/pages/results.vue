@@ -1,8 +1,10 @@
 <template>
     <v-main>
-        <h1> Results: "{{searchTerm}}"</h1>
-        <h3>Store: 160</h3>
-        <hr />
+        <v-banner sticky="true" :color="this.$vuetify.theme.themes.dark.primary">
+            <h1> Results: "{{searchTerm}}"</h1>
+            <h3>Store: 160</h3>
+        </v-banner>
+        
         <v-container >
             <ProductResults></ProductResults>
             <StoreMap></StoreMap>
