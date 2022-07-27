@@ -37,10 +37,7 @@ export class Recommendations {
             //     })
             // });
 
-            responses.push({
-                name: responseData[0].skus[0].name
-            })
-            
+            responses.push(responseData[0].skus);  
         }
 
         console.log(responses);
