@@ -2,13 +2,13 @@
     <v-app >
         <Nuxt>
         </Nuxt>
-
         <v-footer app>
             <NuxtLink to="/" class="align-center">
                 <v-img src="https://i.pinimg.com/originals/b0/2b/5e/b02b5ef69f0e9d9198749632d5940647.png" width="100px"
                     height="100px" />
             </NuxtLink>
             <v-btn @click="toggleTheme" text rounded>Toggle Theme</v-btn>
+            <!-- <div justify="end"><Avatar /></div> -->
         </v-footer>
     </v-app>
 </template>
@@ -19,6 +19,11 @@ import Avatar from '../components/Avatar.vue'
 export default {
     components: {
         Avatar
+    },
+    data() {
+        return {
+            backendUrl: "http://127.0.0.1:8000/"
+        }
     },
 
     methods: {

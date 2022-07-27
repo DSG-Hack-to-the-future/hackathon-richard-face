@@ -11,6 +11,7 @@ export default {
   ],
   modules: [
       // Simple usage
-      '@nuxtjs/vuetify'
+      '@nuxtjs/vuetify',
+      '@nuxtjs/axios'
   ]
 }
