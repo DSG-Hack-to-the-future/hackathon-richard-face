@@ -7,18 +7,17 @@ Vue.use(Vuetify)
 const opts = { 
     theme: {
         themes: {
-            custom: { 
+            dark: { 
                 primary: "#085A4A",
                 secondary: "#f26422",
                 accent: '#e98f3a',
-                anchor: "#8c8e91",
                 error: '#FF5252',
-                info: '#0c967d',
-                success: '#4CAF50',
-                warning: '#FFC107',
+                // info: '#0c967d',
+                // success: '#4CAF50',
+                // warning: '#FFC107',
             }
         },
-        custom: true
+        dark: true
     } 
 }
 

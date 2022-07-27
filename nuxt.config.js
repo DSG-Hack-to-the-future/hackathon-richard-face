@@ -7,10 +7,19 @@ export default {
     transpile: ['mdi-vue'],
   },
   plugins: [
-    '@/plugins/vuetify.js'
+    '@/plugins/vuetify.js',
+    '~/plugins/integrations.js',
   ],
   modules: [
       // Simple usage
-      '@nuxtjs/vuetify'
-  ]
+      '@nuxtjs/vuetify',
+      '@nuxtjs/axios',
+  ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    "/api/": "http://localhost:8000",
+    "/v3/findByEcode": "https://prod-catalog-productdetails-api.iso.ap01.pcf.dcsg.com"
+  }
 }
