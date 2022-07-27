@@ -1,16 +1,16 @@
 <template>
     <v-main>
-        <v-banner sticky="true" :color="this.$vuetify.theme.themes.dark.primary">
-            <h1> Results: "{{searchTerm}}"</h1>
+        <v-banner sticky :color="this.$vuetify.theme.themes.dark.primary">
+            <h1>Results: "{{searchTerm}}"</h1>
             <h3>Store: 160</h3>
         </v-banner>
         
         <v-container >
-            <ProductResults></ProductResults>
+            <ProductResults :query="this.$route.query['search']"></ProductResults>
             <StoreMap></StoreMap>
+            <Recommendations></Recommendations>
             <ProTips></ProTips>
             <CommunityCalendar></CommunityCalendar>
-            <Recommendations></Recommendations>
         </v-container>
         
     </v-main>

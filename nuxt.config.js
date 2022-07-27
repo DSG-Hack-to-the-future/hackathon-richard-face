@@ -14,6 +14,7 @@ export default {
       // Simple usage
       '@nuxtjs/vuetify',
       '@nuxtjs/axios',
+      '@nuxtjs/proxy',
   ],
   axios: {
     proxy: true
